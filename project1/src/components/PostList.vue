@@ -1,9 +1,11 @@
 <template>
     <div>
-<button @click="getPots">Load Post</button>
+<!-- <button @click="getPots">Load Post</button> -->
 <h3 v-if="errorMsg">{{errorMsg}}</h3>
 <div v-for="item in post" :key="item.id">
 <p>{{item.title}}</p>
+<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+<p>Using text interpolation: {{ rawHtml }}</p>
     </div>
     </div>
 </template>
@@ -12,6 +14,9 @@
 import axios from 'axios';
     export default {
         name:"PostList",
+        created(){
+            this.getPots()
+        },
         data(){
       return{
         post:[],

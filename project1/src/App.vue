@@ -2,22 +2,25 @@
 <div>
   <PostList/>
   <CreatePost/>
-  <!-- <UserForm/> -->
+  <!-- <UserForm/>
+  <ParentComponent /> -->
 </div>
 
 </template>
 
 <script>
 import PostList from './components/PostList.vue';
-import CreatePost from './components/CreatePost.vue';
-// import UserForm from './components/UserForm.vue';
+// import CreatePost from './components/CreatePost.vue';
+// // import UserForm from './components/UserForm.vue';
+// import ParentComponent from './components/ParentComponent.vue'
 
 export default {
   name: 'App',
   components:{
     PostList,
     // UserForm
-    CreatePost
+    // CreatePost
+    // ParentComponent
   }
 }
 </script>
